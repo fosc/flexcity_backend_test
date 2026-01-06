@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component
 
 
 @Component
-@ConditionalOnProperty(name = ["selection.engine"], havingValue = "greedy", matchIfMissing = true)
+@ConditionalOnProperty(name = ["selection.engine"], havingValue = "greedy", matchIfMissing = false)
 class GreedyEngine : AssetSelectionEngine {
     /**
      * Selects assets using a fast, heuristic-based greedy approach.
