@@ -3,7 +3,6 @@ package com.flexcity.service
 import com.flexcity.model.Asset
 import com.flexcity.model.SelectionResult
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
-import org.springframework.context.annotation.Primary
 import org.springframework.stereotype.Component
 import kotlin.math.min
 
@@ -48,9 +47,7 @@ class HybridEngine : AssetSelectionEngine {
         val greedyAssets = selectAssetsGreedy(greedyTarget, allAssets)
         val actualDPTarget = targetVolume - greedyAssets.sumOf { it.volume }
 
-        println("actualDPTarget:${actualDPTarget}" )
         if (actualDPTarget <= 0) {
-            println("Hybrid engine: Greedy selection met target volume, skipping DP")
             return SelectionResult.Success(greedyAssets)
         }
 
