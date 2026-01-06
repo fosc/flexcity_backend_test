@@ -49,7 +49,7 @@ Availability of the asset data is distributed evenly between `LocalDate.now()`, 
 
 ## Design Decisions
 ### Language and Framework
-Springboot 3.x with Kotlin 2.0+ on java 21 was selected for several reasons. Java 21 is stable with LTS through 2029, and
+Springboot 4.x with Kotlin 2.0+ on java 21 was selected for several reasons. Java 21 is stable with LTS through 2029, and
 Springboot is already widely used at Flexcity, providing a robust and scalable web framework. 
 Furthermore, JVM is more performant than python for the kinds of algorithms we are using
 in this project (i.e. dynamic programming), and Kotlin has many convenient modern language features.
