@@ -1,7 +1,7 @@
 # Flexcity Backend technical test
 
 ## How to run the project
-in the root directory of the project, run
+In the root directory of the project, run
 
 `./gradlew bootRun`
 
